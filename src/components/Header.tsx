@@ -33,7 +33,7 @@ export function Header() {
     <>
       <header className="site-header">
         <div className="header-shell">
-          <Brand compact />
+          <Brand compact preload />
           <nav className="desktop-nav" aria-label="主导航">
             {links.map((link) => (
               <Link

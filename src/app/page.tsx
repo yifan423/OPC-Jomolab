@@ -141,7 +141,7 @@ export default function Home() {
           <div className="page-shell">
             <div className="learning-stage">
               <Image
-                src="/images/generated/learning-banner.png"
+                src="/images/generated/learning-banner.webp"
                 alt=""
                 fill
                 sizes="(max-width: 768px) 100vw, 1400px"
@@ -259,7 +259,7 @@ export default function Home() {
         <section className="contact-section section-pad" id="contact">
           <div className="contact-background">
             <Image
-              src="/images/generated/contact-bg.png"
+              src="/images/generated/contact-bg.webp"
               alt=""
               fill
               sizes="100vw"

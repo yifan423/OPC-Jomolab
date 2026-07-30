@@ -26,7 +26,7 @@ export default function LearningPage() {
       <main className="learning-page inner-page">
         <section className="learning-hero">
           <Image
-            src="/images/generated/learning-banner.png"
+            src="/images/generated/learning-banner.webp"
             alt=""
             fill
             priority

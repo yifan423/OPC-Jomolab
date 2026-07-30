@@ -25,7 +25,7 @@ export function HeroScene() {
         style={reduceMotion ? undefined : { y: backgroundY }}
       >
         <Image
-          src="/images/generated/hero-sky-4k.jpg"
+          src="/images/generated/hero-sky-4k.webp"
           alt=""
           fill
           priority
@@ -52,7 +52,7 @@ export function HeroScene() {
           lineContent={[
             <Image
               key="hero-wordmark"
-              src="/images/brand/jomolab-hero-wordmark.png"
+              src="/images/brand/jomolab-hero-wordmark.webp"
               alt=""
               width={1538}
               height={241}

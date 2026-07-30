@@ -4,9 +4,11 @@ import Link from "next/link";
 export function Brand({
   compact = false,
   reversed = false,
+  preload = false,
 }: {
   compact?: boolean;
   reversed?: boolean;
+  preload?: boolean;
 }) {
   return (
     <Link
@@ -17,13 +19,14 @@ export function Brand({
       <Image
         src={
           reversed
-            ? "/images/brand/jomolab-logo-white.png"
-            : "/images/brand/jomolab-logo.png"
+            ? "/images/brand/jomolab-logo-white.webp"
+            : "/images/brand/jomolab-logo.webp"
         }
         alt="Jomolab"
         width={1220}
         height={300}
-        priority
+        preload={preload}
+        sizes="(max-width: 620px) 132px, 190px"
         className={compact ? "brand-image brand-image-compact" : "brand-image"}
       />
     </Link>
