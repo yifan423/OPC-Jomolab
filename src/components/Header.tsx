@@ -9,10 +9,10 @@ import { AuthDialog } from "./AuthDialog";
 import { Brand } from "./Brand";
 
 const links = [
-  { label: "设计服务", href: "/#services" },
-  { label: "OPC 计划", href: "/#opc" },
-  { label: "学习中心", href: "/#learning" },
-  { label: "签约背书", href: "/#proof" },
+  { label: "产业服务", href: "/#services" },
+  { label: "AI工具", href: "/#tools" },
+  { label: "成长中心", href: "/#learning" },
+  { label: "孵化中心", href: "/#incubation" },
 ];
 
 export function Header() {

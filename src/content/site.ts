@@ -1,6 +1,6 @@
 export type ContactIntent =
   | "加入社区"
-  | "设计服务"
+  | "产业资源"
   | "课程咨询"
   | "高校合作"
   | "工具与算力合作";
@@ -74,25 +74,37 @@ export type ProofItem = {
 
 export type StudentProofItem = {
   id: string;
-  profile: string;
+  name: string;
   avatar: string;
   avatarAlt: string;
-  course: string;
-  project: string;
-  result: string;
-  status: "脱敏占位";
+  categoryTags: string[];
+  difficultyTags: string[];
+  courses: string[];
+};
+
+export type SchoolBase = {
+  id: string;
+  name: string;
+  summary: string[];
+  metric: string;
+  metricLabel: string;
+  tags: string[];
+  images: {
+    src: string;
+    alt: string;
+  }[];
 };
 
 export const services: ServiceCategory[] = [
   {
     slug: "aigc-graphic",
-    eyebrow: "视觉系统与增长创意",
-    title: "AIGC 平面",
-    english: "AIGC GRAPHIC",
+    eyebrow: "品牌、营销与多元视觉创意",
+    title: "AI 创意设计",
+    english: "AI CREATIVE DESIGN",
     index: "01",
     description:
-      "把品牌策略、视觉语言与生成式工作流放进同一套交付体系，让创意既有辨识度，也能持续扩展。",
-    image: "/images/generated/service-graphic.webp",
+      "覆盖品牌设计、营销设计、插画设计、3D 设计与设计技能等多样化产业需求。",
+    image: "/images/services/aigc-creative/hero-ai-creative-design.jpg",
     accent: "#b8ef45",
     filters: ["全部", "品牌视觉", "营销海报", "电商视觉", "IP 视觉"],
     deliverables: ["品牌概念与视觉母版", "AIGC 视觉工作流", "营销物料延展", "可复用提示词与资产库"],
@@ -473,46 +485,135 @@ export const proofs: ProofItem[] = [
   },
 ];
 
+export const schoolBases: SchoolBase[] = [
+  {
+    id: "dehong-vocational-college",
+    name: "德宏职业学院",
+    summary: [
+      "德宏职业学院是一所以医、工、财、旅专业为主的综合性高等职业院校，围绕口岸经济与面向南亚东南亚辐射中心建设，形成6大专业群、40个高职专科专业的教育体系。",
+      "2023年，德宏州人民政府、德宏职业学院与阿里巴巴、银泰商业集团泰渡签署合作，建设开放型产教融合实践中心，引入真实生产项目，推进工学一体与课程实践改革。",
+    ],
+    metric: "2500㎡",
+    metricLabel: "开放型产教融合实践中心",
+    tags: ["口岸经济", "跨境电子商务", "真实生产项目", "工学一体"],
+    images: [
+      {
+        src: "/images/schools/dehong/base-entry.webp",
+        alt: "德宏职业学院校企共建智慧物流实训基地入口",
+      },
+      {
+        src: "/images/schools/dehong/industry-center.webp",
+        alt: "德宏职业学院产教融合实践中心",
+      },
+      {
+        src: "/images/schools/dehong/training-class.webp",
+        alt: "德宏职业学院跨境电商实训课堂",
+      },
+    ],
+  },
+  {
+    id: "heilongjiang-agricultural-economy-vocational-college",
+    name: "黑龙江农业经济职业学院",
+    summary: [
+      "黑龙江农业经济职业学院始建于1958年，长期坚持立足乡村办学与服务三农，与周边农业市县建立紧密的产学研合作关系。",
+      "学院设有阿里农村电商产业学院，建设兼顾学生综合实训、创业、社会服务与国际交流的多功能产教融合实训中心，为项目实践提供线下承载空间。",
+    ],
+    metric: "3000㎡",
+    metricLabel: "多功能产教融合实训中心",
+    tags: ["阿里农村电商产业学院", "服务三农", "产学研合作", "综合实训"],
+    images: [
+      {
+        src: "/images/schools/heilongjiang-agri/training-workspace.webp",
+        alt: "黑龙江农业经济职业学院实训工作空间",
+      },
+      {
+        src: "/images/schools/heilongjiang-agri/project-practice.webp",
+        alt: "黑龙江农业经济职业学院电商项目实践场景",
+      },
+      {
+        src: "/images/schools/heilongjiang-agri/industry-studio.webp",
+        alt: "黑龙江农业经济职业学院产教融合实训中心",
+      },
+      {
+        src: "/images/schools/heilongjiang-agri/data-training.webp",
+        alt: "黑龙江农业经济职业学院数据实训课堂",
+      },
+    ],
+  },
+];
+
 export const studentProofs: StudentProofItem[] = [
   {
-    id: "aigc-design",
-    profile: "AIGC 设计方向学员",
+    id: "elina",
+    name: "Elina",
+    avatar: "/images/students/elina.jpg",
+    avatarAlt: "Elina 的个人档案照片",
+    categoryTags: ["实训实践", "效果营销"],
+    difficultyTags: ["产品运营", "高级 OPC"],
+    courses: ["AIGC 训练营", "营销策划训练营"],
+  },
+  {
+    id: "student-placeholder-02",
+    name: "姓名待补充",
     avatar: "/images/generated/student-avatars/student-a.webp",
-    avatarAlt: "AIGC 设计方向学员卡通头像占位",
-    course: "AIGC 设计训练营",
-    project: "品牌主视觉与社交内容延展练习",
-    result: "完成可展示的视觉提案，证书信息待确认",
-    status: "脱敏占位",
+    avatarAlt: "个人 OPC 学员 AI 头像占位",
+    categoryTags: ["品类待补充"],
+    difficultyTags: ["难度待补充"],
+    courses: ["课程待补充"],
   },
   {
-    id: "cross-border",
-    profile: "跨境内容方向学员",
+    id: "student-placeholder-03",
+    name: "姓名待补充",
     avatar: "/images/generated/student-avatars/student-b.webp",
-    avatarAlt: "跨境内容方向学员卡通头像占位",
-    course: "TikTok 跨境训练营",
-    project: "账号定位与短视频内容计划",
-    result: "形成账号启动方案，阶段成果待核验",
-    status: "脱敏占位",
+    avatarAlt: "个人 OPC 学员 AI 头像占位",
+    categoryTags: ["品类待补充"],
+    difficultyTags: ["难度待补充"],
+    courses: ["课程待补充"],
   },
   {
-    id: "marketing",
-    profile: "营销策划方向学员",
+    id: "student-placeholder-04",
+    name: "姓名待补充",
     avatar: "/images/generated/student-avatars/student-c.webp",
-    avatarAlt: "营销策划方向学员卡通头像占位",
-    course: "营销策划训练营",
-    project: "新品整合传播策略提案",
-    result: "完成策略框架与路演材料，结营状态待确认",
-    status: "脱敏占位",
+    avatarAlt: "个人 OPC 学员 AI 头像占位",
+    categoryTags: ["品类待补充"],
+    difficultyTags: ["难度待补充"],
+    courses: ["课程待补充"],
   },
   {
-    id: "offline-practice",
-    profile: "项目实践方向学员",
+    id: "student-placeholder-05",
+    name: "姓名待补充",
     avatar: "/images/generated/student-avatars/student-d.webp",
-    avatarAlt: "项目实践方向学员卡通头像占位",
-    course: "线下项目实践",
-    project: "园区商业命题协作",
-    result: "沉淀项目作品与复盘文档，证明材料待补充",
-    status: "脱敏占位",
+    avatarAlt: "个人 OPC 学员 AI 头像占位",
+    categoryTags: ["品类待补充"],
+    difficultyTags: ["难度待补充"],
+    courses: ["课程待补充"],
+  },
+  {
+    id: "student-placeholder-06",
+    name: "姓名待补充",
+    avatar: "/images/generated/student-avatars/student-a.webp",
+    avatarAlt: "个人 OPC 学员 AI 头像占位",
+    categoryTags: ["品类待补充"],
+    difficultyTags: ["难度待补充"],
+    courses: ["课程待补充"],
+  },
+  {
+    id: "student-placeholder-07",
+    name: "姓名待补充",
+    avatar: "/images/generated/student-avatars/student-b.webp",
+    avatarAlt: "个人 OPC 学员 AI 头像占位",
+    categoryTags: ["品类待补充"],
+    difficultyTags: ["难度待补充"],
+    courses: ["课程待补充"],
+  },
+  {
+    id: "student-placeholder-08",
+    name: "姓名待补充",
+    avatar: "/images/generated/student-avatars/student-c.webp",
+    avatarAlt: "个人 OPC 学员 AI 头像占位",
+    categoryTags: ["品类待补充"],
+    difficultyTags: ["难度待补充"],
+    courses: ["课程待补充"],
   },
 ];
 

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight, Check } from "@phosphor-icons/react/dist/ssr";
 import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
+import { CreativeDesignCatalog } from "@/components/CreativeDesignCatalog";
 import { Footer } from "@/components/Footer";
 import { LineReveal } from "@/components/LineReveal";
 import { Reveal } from "@/components/Reveal";
@@ -32,6 +33,22 @@ export default async function ServicePage({ params }: Props) {
   const { slug } = await params;
   const service = getService(slug);
   if (!service) notFound();
+
+  if (service.slug === "aigc-graphic") {
+    return (
+      <>
+        <BreadcrumbJsonLd
+          items={[
+            { name: "首页", path: "/" },
+            { name: "产业服务", path: "/#services" },
+            { name: "AI 创意设计", path: "/services/aigc-graphic" },
+          ]}
+        />
+        <CreativeDesignCatalog />
+        <Footer />
+      </>
+    );
+  }
 
   return (
     <>
@@ -123,7 +140,7 @@ export default async function ServicePage({ params }: Props) {
             <div className="inner-cta">
               <div>
                 <p>READY WHEN YOU ARE</p>
-                <h2>让我们从一个真正重要的问题开始。</h2>
+                <LineReveal lines={["让我们从一个真正重要的", "问题开始。"]} />
               </div>
               <Link className="button button-light" href="/?intent=设计服务#contact">
                 联系 Jomolab

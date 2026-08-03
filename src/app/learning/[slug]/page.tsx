@@ -315,7 +315,7 @@ export default async function LearningDetailPage({ params }: Props) {
             <div className="inner-cta">
               <div>
                 <p>NEXT STEP</p>
-                <h2>先确认这是不是适合你的学习路径。</h2>
+                <LineReveal lines={["先确认这是不是适合你的", "学习路径。"]} />
               </div>
               <Link className="button button-light" href="/?intent=课程咨询#contact">
                 预约沟通

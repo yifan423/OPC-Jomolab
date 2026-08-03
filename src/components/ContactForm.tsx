@@ -7,7 +7,7 @@ import type { ContactIntent } from "@/content/site";
 
 const intents: ContactIntent[] = [
   "加入社区",
-  "设计服务",
+  "产业资源",
   "课程咨询",
   "高校合作",
   "工具与算力合作",

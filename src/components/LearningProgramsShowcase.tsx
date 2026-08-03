@@ -10,6 +10,7 @@ import {
   GraduationCap,
   UsersThree,
 } from "@phosphor-icons/react";
+import { LineReveal } from "@/components/LineReveal";
 import type { LearningProgram } from "@/content/site";
 
 type PracticeRole = {
@@ -51,7 +52,11 @@ export function LearningProgramsShowcase({
           </div>
           <div>
             <p>CLASS PROGRAMS · 班课</p>
-            <h3 id="learning-camps-title">体验研学营</h3>
+            <LineReveal
+              as="h3"
+              id="learning-camps-title"
+              lines={["体验研学营"]}
+            />
             <span>三条学习路径，从工具认知进入真实项目与成果交付。</span>
           </div>
         </div>
@@ -128,7 +133,11 @@ export function LearningProgramsShowcase({
             </div>
             <div>
               <p>OFFLINE PRACTICE · 实训</p>
-              <h3 id="learning-practice-title">线下实训实践</h3>
+              <LineReveal
+                as="h3"
+                id="learning-practice-title"
+                lines={["线下实训实践"]}
+              />
             </div>
           </div>
           <p className="learning-practice-description">

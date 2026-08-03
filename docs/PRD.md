@@ -47,7 +47,7 @@ Jomolab 官网是中文优先的 AI-OPC 商业生态入口，通过清晰的多�
 
 首页导航：
 
-- 设计服务：`/#services`
+- 产业资源：`/#services`
 - OPC 计划：`/#opc`
 - 学习中心：`/learning`
 - 签约背书：`/#proof`

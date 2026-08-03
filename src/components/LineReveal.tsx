@@ -5,6 +5,7 @@ import { useRef, type ReactNode } from "react";
 
 type LineRevealProps = {
   as?: "h1" | "h2" | "h3";
+  id?: string;
   lines: string[];
   className?: string;
   lineClassNames?: Array<string | undefined>;
@@ -14,6 +15,7 @@ type LineRevealProps = {
 
 export function LineReveal({
   as: Tag = "h2",
+  id,
   lines,
   className,
   lineClassNames = [],
@@ -33,6 +35,7 @@ export function LineReveal({
   return (
     <Tag
       ref={nodeRef}
+      id={id}
       className={className}
       aria-label={label}
       data-line-reveal=""

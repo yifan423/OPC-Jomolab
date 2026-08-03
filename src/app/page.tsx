@@ -2,28 +2,28 @@ import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
 import {
+  ArrowDown,
   ArrowUpRight,
   BookOpenText,
-  Briefcase,
-  Certificate,
   GraduationCap,
-  ShieldCheck,
   Sparkle,
 } from "@phosphor-icons/react/dist/ssr";
 import { ContactForm } from "@/components/ContactForm";
+import { EcosystemGateway } from "@/components/EcosystemGateway";
 import { Footer } from "@/components/Footer";
 import { HeroScene } from "@/components/HeroScene";
 import { LogoRail } from "@/components/LogoRail";
 import { LineReveal } from "@/components/LineReveal";
 import { LearningProgramsShowcase } from "@/components/LearningProgramsShowcase";
 import { Reveal } from "@/components/Reveal";
+import { SchoolBaseShowcase } from "@/components/SchoolBaseShowcase";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceRail } from "@/components/ServiceRail";
 import {
   ecosystemLogos,
   learningPrograms,
   practiceRoles,
-  services,
+  schoolBases,
   studentProofs,
   tools,
 } from "@/content/site";
@@ -45,12 +45,25 @@ export default function Home() {
       />
       <main>
         <HeroScene />
+        <EcosystemGateway />
         <div className="hero-transition-bed" aria-hidden="true" />
-        <ServiceRail items={services} />
+        <ServiceRail />
         <section
           className="service-logo-continuation"
           aria-label="创意生态合作伙伴"
         >
+          <div
+            className="ecosystem-source-label"
+            aria-label="Jomolab 的产业来自于以下生态伙伴"
+          >
+            <span className="ecosystem-source-dot" aria-hidden="true" />
+            <span>
+              <strong>Jomolab</strong> 的产业来自于
+            </span>
+            <span className="ecosystem-source-arrow" aria-hidden="true">
+              <ArrowDown size={18} weight="bold" />
+            </span>
+          </div>
           <LogoRail items={ecosystemLogos} />
         </section>
 
@@ -62,7 +75,7 @@ export default function Home() {
               description="Jomolab 将工具、算力、课程与真实项目连接起来，帮助 OPC 从想法走向稳定交付。"
             />
           </div>
-          <div className="page-shell tool-shell">
+          <div className="page-shell tool-shell" id="tools">
             <div className="tool-grid">
               {tools.map((tool, index) => {
                 const content = tool.kind === "compute" ? (
@@ -170,12 +183,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="proof-section section-pad" id="proof">
+        <section className="proof-section section-pad" id="incubation">
+          <span className="anchor-alias" id="proof" aria-hidden="true" />
           <div className="page-shell">
             <SectionHeading
               eyebrow="PROOF, NOT PROMISES · 签约与实践"
               titleLines={["让每一份背书", "都经得起核验"]}
-              description="首版只展示已脱敏或等待确认的结构。获得正式授权后，再替换为真实项目、成员与高校信息。"
+              description="联合产业平台与校园生态资源，以真实项目、实践课程与成长服务，共同构建面向 OPC 人才的长期孵化路径。"
               light
             />
             <div className="proof-featured">
@@ -184,74 +198,96 @@ export default function Home() {
                   <Sparkle size={31} weight="fill" />
                 </div>
                 <p>LONG-TERM OPC</p>
-                <h3>长期主义不是一句口号，而是持续合作、公开成果与共同成长。</h3>
-                <span>正式签约 OPC 内容将在完成公开授权后上线。</span>
+                <h3>与阿里云羚羊/天猫校园/腾讯workbuddy共建OPC人才孵化生态</h3>
+                <span>连接平台能力、校园场景与产业实践，持续支持 OPC 人才从专业学习、项目实训走向成果落地与长期成长。</span>
               </Reveal>
               <Reveal className="proof-stat" delay={0.08}>
-                <strong>00</strong>
-                <span>已公开核验的签约信息</span>
-                <p>宁可暂时留白，也不使用未经确认的合作关系。</p>
+                <strong>21</strong>
+                <span>生态共建与人才孵化实践</span>
+                <p>覆盖 AI 学习、内容共创、项目实训与产业协同等多元人才成长场景。</p>
               </Reveal>
             </div>
-            <div className="student-proof-intro">
-              <p>学员成长档案</p>
-              <h3>从学过什么，到真正做成什么</h3>
-              <span>
-                当前为脱敏结构与内容占位，正式发布前将由学员确认头像、课程、项目和成果信息。
-              </span>
-            </div>
-            <div className="student-proof-grid">
-              {studentProofs.map((student, index) => (
-                <Reveal
-                  className={`student-proof-card student-proof-card-${index + 1}`}
-                  delay={index * 0.04}
-                  key={student.id}
-                >
-                  <div className="student-proof-profile">
-                    <div className="student-proof-avatar">
-                      <Image
-                        src={student.avatar}
-                        alt={student.avatarAlt}
-                        width={512}
-                        height={512}
-                        sizes="112px"
-                      />
-                    </div>
-                    <div>
-                      <span>{student.status}</span>
-                      <h4>{student.profile}</h4>
-                    </div>
-                  </div>
-                  <div className="student-proof-record">
-                    <div>
-                      <BookOpenText size={22} weight="duotone" />
-                      <span>学习课程</span>
-                      <strong>{student.course}</strong>
-                    </div>
-                    <div>
-                      <Briefcase size={22} weight="duotone" />
-                      <span>参与项目</span>
-                      <strong>{student.project}</strong>
-                    </div>
-                    <div>
-                      <Certificate size={22} weight="duotone" />
-                      <span>证书或成果</span>
-                      <strong>{student.result}</strong>
-                    </div>
-                  </div>
-                  <div className="student-proof-foot">
-                    <ShieldCheck size={18} weight="duotone" />
-                    <span>公开前需完成本人授权与材料核验</span>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-            <div className="proof-partner-note">
-              <div>
-                <span>高校与机构合作</span>
-                <strong>合作项目与签约信息预留</strong>
-              </div>
-              <p>完成公开授权后，将补充院校名称、项目周期、参与方向与可核验材料。</p>
+            <div className="incubation-tracks">
+              <section className="enterprise-opc" aria-labelledby="enterprise-opc-title">
+                <div className="student-proof-intro enterprise-opc-intro">
+                  <p>校企 OPC</p>
+                  <LineReveal
+                    as="h3"
+                    id="enterprise-opc-title"
+                    lines={["校企产教融合", "实践基地"]}
+                  />
+                  <span>从院校专业资源到真实实训空间，呈现 OPC 人才培养与项目实践的线下承载能力。</span>
+                </div>
+                <SchoolBaseShowcase schools={schoolBases} />
+              </section>
+
+              <section className="personal-opc" aria-labelledby="personal-opc-title">
+                <div className="student-proof-intro">
+                  <p>个人 OPC</p>
+                  <LineReveal
+                    as="h3"
+                    id="personal-opc-title"
+                    lines={["学员个人", "成长档案"]}
+                  />
+                  <span>以个人照片、能力标签与参与课程，呈现每位学员清晰可读的成长路径。</span>
+                </div>
+                <div className="student-proof-grid student-proof-grid-archive">
+                  {studentProofs.map((student, index) => (
+                    <Reveal
+                      className="student-proof-card"
+                      delay={index * 0.04}
+                      key={student.id}
+                    >
+                      <div className="student-proof-profile">
+                        <div className="student-proof-avatar">
+                          <Image
+                            src={student.avatar}
+                            alt={student.avatarAlt}
+                            width={512}
+                            height={512}
+                            sizes="(max-width: 620px) 84px, 76px"
+                          />
+                        </div>
+                        <div>
+                          <span>个人 OPC</span>
+                          <h4>{student.name}</h4>
+                        </div>
+                      </div>
+
+                      <div className="student-proof-record">
+                        <div>
+                          <Sparkle size={22} weight="duotone" />
+                          <span>品类标签</span>
+                          <strong className="student-proof-tags">
+                            {student.categoryTags.map((tag) => (
+                              <span className="student-proof-tag" key={tag}>{tag}</span>
+                            ))}
+                          </strong>
+                        </div>
+                        <div>
+                          <GraduationCap size={22} weight="duotone" />
+                          <span>难度标签</span>
+                          <strong className="student-proof-tags student-proof-tags-difficulty">
+                            {student.difficultyTags.map((tag) => (
+                              <span className="student-proof-tag" key={tag}>{tag}</span>
+                            ))}
+                          </strong>
+                        </div>
+                        <div>
+                          <BookOpenText size={22} weight="duotone" />
+                          <span>参与课程</span>
+                          <strong>{student.courses.join(" ｜ ")}</strong>
+                        </div>
+                      </div>
+
+                      <div className="student-proof-foot">
+                        <GraduationCap size={18} weight="duotone" />
+                        <span>个人 OPC 成长档案</span>
+                      </div>
+                    </Reveal>
+                  ))}
+                </div>
+              </section>
             </div>
           </div>
         </section>
