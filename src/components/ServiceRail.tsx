@@ -9,14 +9,14 @@ const serviceModules = [
     title: "AI 创意设计",
     description:
       "AI平面创意、AI视频动效、AI创意制作等多样化产业需求",
-    image: "/images/generated/service-ai-creative-design.png",
+    image: "/images/generated/service-ai-creative-design.webp",
     href: "/services/aigc-graphic",
   },
   {
     title: "AI 效果营销",
     description:
       "AI新媒体内容制作与传播、AI营销活动运营与执行、美陈装置潮玩市集等多样化产业需求",
-    image: "/images/generated/service-ai-performance-marketing.png",
+    image: "/images/generated/service-ai-performance-marketing.webp",
     href: "/services/ai-communications",
   },
 ];
@@ -47,6 +47,7 @@ export function ServiceRail() {
                   src={service.image}
                   alt=""
                   fill
+                  unoptimized
                   sizes="(max-width: 767px) calc(100vw - 28px), (max-width: 1600px) 50vw, 740px"
                   className="service-duo-image"
                 />

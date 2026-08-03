@@ -69,7 +69,7 @@ export function CreativeDesignCatalog() {
     <main className="creative-catalog-page">
       <section className="creative-catalog-hero" aria-labelledby="creative-catalog-title">
         <Image
-          src="/images/services/aigc-creative/hero-ai-creative-design.jpg"
+          src="/images/services/aigc-creative/hero-ai-creative-design.webp"
           alt="由品牌视觉、三维空间与插画元素组成的 AI 创意设计场景"
           fill
           priority
@@ -196,6 +196,7 @@ export function CreativeDesignCatalog() {
                           src={item.image}
                           alt={item.imageAlt}
                           fill
+                          unoptimized
                           sizes="(max-width: 980px) 42vw, 280px"
                           style={{ objectPosition: item.imagePosition }}
                         />

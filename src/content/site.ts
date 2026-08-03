@@ -104,7 +104,7 @@ export const services: ServiceCategory[] = [
     index: "01",
     description:
       "覆盖品牌设计、营销设计、插画设计、3D 设计与设计技能等多样化产业需求。",
-    image: "/images/services/aigc-creative/hero-ai-creative-design.jpg",
+    image: "/images/services/aigc-creative/hero-ai-creative-design.webp",
     accent: "#b8ef45",
     filters: ["全部", "品牌视觉", "营销海报", "电商视觉", "IP 视觉"],
     deliverables: ["品牌概念与视觉母版", "AIGC 视觉工作流", "营销物料延展", "可复用提示词与资产库"],

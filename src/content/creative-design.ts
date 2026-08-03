@@ -34,7 +34,7 @@ export const creativeDesignSkus: CreativeDesignSku[] = [
     price: "¥53~1,013",
     summary: "面向产品功能、营销活动与品牌触点，建立清晰统一的图标语言。",
     tags: ["功能图标", "活动图标", "视觉规范"],
-    image: "/images/services/aigc-creative/brand-icon-design.png",
+    image: "/images/services/aigc-creative/brand-icon-design.webp",
     imageAlt: "Icon 设计案例",
   },
   {
@@ -45,7 +45,7 @@ export const creativeDesignSkus: CreativeDesignSku[] = [
     price: "¥867~4,356",
     summary: "围绕品牌定位完成标志概念、基础图形与核心使用场景设计。",
     tags: ["标志设计", "基础图形", "品牌应用"],
-    image: "/images/services/aigc-creative/brand-logo-design.png",
+    image: "/images/services/aigc-creative/brand-logo-design.webp",
     imageAlt: "Logo 设计案例",
   },
   {
@@ -56,7 +56,7 @@ export const creativeDesignSkus: CreativeDesignSku[] = [
     price: "¥7,346~12,243",
     summary: "从品牌命题、创意概念到视觉方向，形成可进入执行阶段的完整提案。",
     tags: ["品牌策略", "创意概念", "视觉方向"],
-    image: "/images/services/aigc-creative/brand-creative-proposal.png",
+    image: "/images/services/aigc-creative/brand-creative-proposal.webp",
     imageAlt: "品牌创意提案案例",
   },
   {
@@ -67,7 +67,7 @@ export const creativeDesignSkus: CreativeDesignSku[] = [
     price: "¥14~3,124",
     summary: "适配站内外广告位、活动入口与传播资源位的横幅视觉设计。",
     tags: ["广告横幅", "活动入口", "多尺寸适配"],
-    image: "/images/services/aigc-creative/marketing-banner.png",
+    image: "/images/services/aigc-creative/marketing-banner.webp",
     imageAlt: "Banner 设计案例",
   },
   {
@@ -78,7 +78,7 @@ export const creativeDesignSkus: CreativeDesignSku[] = [
     price: "¥529~12,252",
     summary: "围绕活动主题建立核心视觉，并为后续线上线下延展提供统一基准。",
     tags: ["活动主视觉", "概念表达", "物料延展"],
-    image: "/images/services/aigc-creative/marketing-key-visual.png",
+    image: "/images/services/aigc-creative/marketing-key-visual.webp",
     imageAlt: "主视觉 KV 设计案例",
   },
   {
@@ -89,7 +89,7 @@ export const creativeDesignSkus: CreativeDesignSku[] = [
     price: "¥265~1,666",
     summary: "用于社交媒体、电商活动与内容传播的高识别度线上宣传海报。",
     tags: ["社交媒体", "电商活动", "内容传播"],
-    image: "/images/services/aigc-creative/marketing-online-poster.png",
+    image: "/images/services/aigc-creative/marketing-online-poster.webp",
     imageAlt: "线上海报设计案例",
     imagePosition: "center 45%",
   },
@@ -101,7 +101,7 @@ export const creativeDesignSkus: CreativeDesignSku[] = [
     price: "¥147~20,178",
     summary: "适配门店、展陈与公共传播环境，兼顾远距离识别与现场观看体验。",
     tags: ["门店物料", "展陈传播", "印刷适配"],
-    image: "/images/services/aigc-creative/marketing-offline-poster.png",
+    image: "/images/services/aigc-creative/marketing-offline-poster.webp",
     imageAlt: "线下海报设计案例",
   },
   {
@@ -112,7 +112,7 @@ export const creativeDesignSkus: CreativeDesignSku[] = [
     price: "¥262~7,116",
     summary: "面向专题活动、内容承接与营销转化场景，完成页面视觉设计。",
     tags: ["专题页面", "活动承接", "移动端视觉"],
-    image: "/images/services/aigc-creative/marketing-page-design.png",
+    image: "/images/services/aigc-creative/marketing-page-design.webp",
     imageAlt: "营销页面设计案例",
     imagePosition: "center 38%",
   },
@@ -124,7 +124,7 @@ export const creativeDesignSkus: CreativeDesignSku[] = [
     price: "¥330~5,896",
     summary: "为品牌内容、活动传播与叙事需求创作具有完整氛围的插画场景。",
     tags: ["氛围设定", "叙事场景", "商业插画"],
-    image: "/images/services/aigc-creative/illustration-scene.png",
+    image: "/images/services/aigc-creative/illustration-scene.webp",
     imageAlt: "插画场景设计案例",
   },
   {
@@ -135,7 +135,7 @@ export const creativeDesignSkus: CreativeDesignSku[] = [
     price: "¥404~2,055",
     summary: "完成角色造型、表情与基础视觉设定，支持内容与品牌场景延展。",
     tags: ["角色设定", "表情动作", "视觉延展"],
-    image: "/images/services/aigc-creative/illustration-character.png",
+    image: "/images/services/aigc-creative/illustration-character.webp",
     imageAlt: "插画角色设计案例",
   },
   {
@@ -146,7 +146,7 @@ export const creativeDesignSkus: CreativeDesignSku[] = [
     price: "¥2,233~20,178",
     summary: "用于品牌发布、电商传播与空间概念表达的三维场景设计。",
     tags: ["场景搭建", "空间氛围", "商业渲染"],
-    image: "/images/services/aigc-creative/3d-scene.png",
+    image: "/images/services/aigc-creative/3d-scene.webp",
     imageAlt: "3D 场景设计案例",
   },
   {
@@ -157,7 +157,7 @@ export const creativeDesignSkus: CreativeDesignSku[] = [
     price: "¥1,624~21,288",
     summary: "从角色造型到材质与展示姿态，形成可用于传播的三维角色资产。",
     tags: ["角色建模", "材质表现", "动作展示"],
-    image: "/images/services/aigc-creative/3d-character.png",
+    image: "/images/services/aigc-creative/3d-character.webp",
     imageAlt: "3D 角色设计案例",
   },
   {
@@ -168,7 +168,7 @@ export const creativeDesignSkus: CreativeDesignSku[] = [
     price: "¥3,710~8,175",
     summary: "聚焦活动命题与传播目标，输出 KV 概念方向、视觉逻辑与关键样张。",
     tags: ["创意策略", "KV 方向", "关键样张"],
-    image: "/images/services/aigc-creative/skill-kv-proposal.png",
+    image: "/images/services/aigc-creative/skill-kv-proposal.webp",
     imageAlt: "KV 创意提案案例",
   },
   {
@@ -179,7 +179,7 @@ export const creativeDesignSkus: CreativeDesignSku[] = [
     price: "¥7,346~12,243",
     summary: "以提案形式梳理品牌创意主张、表达方法与可执行的视觉方向。",
     tags: ["品牌命题", "概念提炼", "提案呈现"],
-    image: "/images/services/aigc-creative/skill-brand-proposal.png",
+    image: "/images/services/aigc-creative/skill-brand-proposal.webp",
     imageAlt: "设计技能品牌创意提案案例",
   },
   {
@@ -190,7 +190,7 @@ export const creativeDesignSkus: CreativeDesignSku[] = [
     price: "¥19",
     summary: "基于已有设计完成不同媒体尺寸的重排、适配与交付文件整理。",
     tags: ["版式适配", "尺寸延展", "交付整理"],
-    image: "/images/services/aigc-creative/skill-resize.png",
+    image: "/images/services/aigc-creative/skill-resize.webp",
     imageAlt: "设计尺寸修改案例",
   },
   {
@@ -201,7 +201,7 @@ export const creativeDesignSkus: CreativeDesignSku[] = [
     price: "¥1.6~4",
     summary: "按使用场景完成主体分离、边缘精修与透明背景素材交付。",
     tags: ["主体分离", "边缘精修", "透明底图"],
-    image: "/images/services/aigc-creative/skill-cutout.png",
+    image: "/images/services/aigc-creative/skill-cutout.webp",
     imageAlt: "图片抠图案例",
   },
 ];
